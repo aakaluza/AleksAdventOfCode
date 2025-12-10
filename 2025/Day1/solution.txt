@@ -1,1 +1,2 @@
-Alek's Solution: 1036
+Alek's Part 1 Solution: 1036
+Alek's Part 2 Solution: 5128
