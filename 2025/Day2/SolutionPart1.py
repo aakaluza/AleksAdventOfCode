@@ -30,7 +30,7 @@ def main():
             endPoint = int(endPoints[1])
             sum += evaluateRange(startPoint, endPoint)
 
-    with open("solution.txt", "w") as solution:
+    with open("solutionPartOne.txt", "w") as solution:
         solution.write(f'Alek\'s Solution: {sum}\n')
 
 main()
