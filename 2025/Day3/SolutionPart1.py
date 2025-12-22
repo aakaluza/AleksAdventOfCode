@@ -1,6 +1,6 @@
 ########################################
 #  Advent of Code 2025 Day 3
-#  Solution
+#  Solution for Part 1
 #  Author: Alek Kaluza
 ########################################
 
