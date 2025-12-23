@@ -7,11 +7,13 @@
 def calculateAdjacencies(warehouse: list[list[int]]) -> int:
     result = 0
 
+
     for i in range(1, len(warehouse) - 1, 1):
         for j in range(1, len(warehouse[i]) - 1, 1):
             if warehouse[i][j] == 1:
                 sum = warehouse[i-1][j-1] + warehouse[i-1][j] + warehouse[i-1][j+1] + warehouse[i][j-1] + warehouse[i][j+1] + warehouse[i+1][j-1] + warehouse[i+1][j] + warehouse[i+1][j+1]
-                if (sum < 4): result += 1
+                if (sum < 4):
+                    result += 1
     
     return result
 
