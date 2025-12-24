@@ -9,24 +9,19 @@ def calculateAdjacencies(warehouse: list[list[int]]) -> int:
     updatedResult = 0
 
     while(True):
-        removedIndices = []
-
         for i in range(1, len(warehouse) - 1, 1):
             for j in range(1, len(warehouse[i]) - 1, 1):
                 if warehouse[i][j] == 1:
                     sum = warehouse[i-1][j-1] + warehouse[i-1][j] + warehouse[i-1][j+1] + warehouse[i][j-1] + warehouse[i][j+1] + warehouse[i+1][j-1] + warehouse[i+1][j] + warehouse[i+1][j+1]
                     if (sum < 4):
                         updatedResult += 1
-                        removedIndices.append((i, j))
+                        warehouse[i][j] = 0
 
-        if updatedResult == 0 or len(removedIndices) == 0:
+        if updatedResult == 0:
             return result
         else:
             result += updatedResult
             updatedResult = 0
-
-            for pair in removedIndices:
-                warehouse[pair[0]][pair[1]] = 0
 
 def main():
     warehouse = []

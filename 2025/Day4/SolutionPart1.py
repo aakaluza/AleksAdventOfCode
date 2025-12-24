@@ -7,7 +7,6 @@
 def calculateAdjacencies(warehouse: list[list[int]]) -> int:
     result = 0
 
-
     for i in range(1, len(warehouse) - 1, 1):
         for j in range(1, len(warehouse[i]) - 1, 1):
             if warehouse[i][j] == 1:
